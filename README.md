@@ -20,3 +20,23 @@ Here's a step-by-step breakdown of what this workflow does:
 - For each iteration, it adds a new row into a designated table with the extracted data.
 #### If the Condition is False:
 - Currently, no actions are defined for this path.
+
+
+## Requirements
+
+- A Microsoft Power Automate account.
+- Access to the email inbox where invoices are received.
+- Permissions to create and update tables in your chosen storage solution (like Excel or a SQL database).
+
+
+
+**By following this README, you should have a good understanding of how to set up and use the workflow. If you run into any issues or have any questions, don't hesitate to reach out!**
+
+**Happy automating! 😊**
+
+
+
+
+
+
+
