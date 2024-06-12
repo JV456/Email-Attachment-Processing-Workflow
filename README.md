@@ -6,7 +6,7 @@ Welcome to the Email Attachment Processing Workflow repository! This project con
 
 Here's a step-by-step breakdown of what this workflow does:
 
-![Workflow Overview]("C:\Users\Jai Vadula\Pictures\Screenshots\Screenshot 2024-06-11 190128.png")
+![Workflow Overview](https://github.com/JV456/Email-Attachment-Processing-Workflow/blob/main/WorkFlow.png?raw=true)
 
 1. **Trigger: When a new email arrives (V3)**
    - The workflow starts when a new email lands in your inbox.
