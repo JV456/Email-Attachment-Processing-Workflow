@@ -30,22 +30,29 @@ Here's a step-by-step breakdown of what this workflow does:
 - Permissions to create and update tables in your chosen storage solution (like Excel or a SQL database).
 
 
-## Setting It Up
+## Step-by-Step Guide to Creating the Workflow
 
-1. **Configure the Email Trigger:**
-   - Set up the trigger to monitor the inbox where you receive your invoices.
+1. **Start with a Trigger:**
+   - In Power Automate, create a new flow and choose "When a new email arrives (V3)" as the trigger.
+   
+2. **Add a Condition:**
+   - After the trigger, add a condition to evaluate specific criteria. This might be checking if the email subject contains certain keywords, or if the sender is a specific person.
 
-2. **Define the Condition:**
-   - Specify the condition that should be checked (e.g., email subject, sender, or content).
+3. **Handle Attachments if Condition is True:**
+   - **Get Attachments:**
+     - Add the action "Get Attachment" to retrieve attachments from the email.
+   - **Extract Information:**
+     - Use an action like "Extract information from invoices" to process the attachments and extract relevant data. This might involve OCR or a predefined template.
+   - **For Each Loop:**
+     - Add a "For Each" loop to process each piece of extracted information or each attachment.
+     - **Add Data to Table:**
+       - Inside the loop, add an action to "Add a row into a table" where you specify the target table and map the extracted data to the table columns.
 
-3. **Attachment Processing:**
-   - Make sure the steps for retrieving attachments and extracting information are properly configured. You might need to tweak these based on your specific invoice formats.
+4. **Handle False Condition:**
+   - If the condition is false, you can either leave it empty or add any other necessary actions.
 
-4. **Link to Your Data Storage:**
-   - Connect the ‘Add a Row into a Table’ step to your storage solution (Excel, SQL database, etc.). Make sure the columns match the data you’re extracting.
-
-5. **Test It Out:**
-   - Send a test email with an invoice attachment to see if everything works correctly. Check that the data is being extracted and added to your table as expected.
+5. **Test and Deploy:**
+   - Save and test your workflow. Send a sample email with an invoice to verify that the workflow runs as expected and the data is correctly added to your table.
 
 
 ## Contributing
